@@ -16,6 +16,6 @@ Enjoy!
 
 ##Deploy
 
-Fist run `ng build` on the client folder.
+Fist run `ng build --prod` on the client folder.
 
 Then you can push the code from the root folder

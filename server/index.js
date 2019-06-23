@@ -46,7 +46,7 @@ app.use('/api/users', userRoutes)
 
 //serve client routes. fist the build command needs to be run on the client folder
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'dist', 'client'))
+    res.sendFile(path.resolve(__dirname, '..', 'dist', 'client', 'index.html'))
 })
 
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-ef6nu.mongodb.net/${process.env.MONGO_DATABASE}`, {

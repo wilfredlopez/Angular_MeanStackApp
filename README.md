@@ -4,6 +4,10 @@ Using Angular, Angular Material, Mongo Database, NodeJS and Express
 
 #Install
 
+`git clone` git@github.com:wilfredlopez/AngularFrontEndTodoApp.git
+
+rename the new repository from "AngularFrontEndTodoApp" to "client"
+
 Fist run `npm install` on both the root folder and then on the client folder
 
 ##Dev

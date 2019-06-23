@@ -8,7 +8,7 @@ const verifyAuth = require('./midlewares/auth')
 const { getPosts, addPosts, deletePost, updatePost, getOnePost } = require('./routes/posts')
 
 //Static client folder
-app.use(express.static(path.join(__dirname, '..', 'client/dist/client')))
+app.use(express.static(path.join(__dirname, '..', 'dist/client')))
 //static images path
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -44,9 +44,9 @@ app.use('/api/users', userRoutes)
 //END ROUTES
 
 
-//serve client routes
+//serve client routes. fist the build command needs to be run on the client folder
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'client'))
+    res.sendFile(path.join(__dirname, '..', 'dist', 'client'))
 })
 
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-ef6nu.mongodb.net/${process.env.MONGO_DATABASE}`, {
